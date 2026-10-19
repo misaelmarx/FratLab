@@ -22,11 +22,15 @@ python -m http.server 8000 --directory dist
 
 Abra `http://localhost:8000` no navegador.
 
-## Publicar no GitHub Pages
+## Publicar na Vercel
 
-Em **Settings → Pages → Build and deployment → Source**, selecione **GitHub Actions**. O fluxo `.github/workflows/pages.yml` verifica o JavaScript e a análise musical e publica a pasta `dist` após envios à branch `main` ou `master`. Ele também pode ser iniciado manualmente pela aba **Actions**.
+Importe o repositório na Vercel com a raiz do projeto em `./`. O arquivo `vercel.json` configura a publicação de `dist`, sem comandos de instalação ou build. Os pushes para a branch de produção conectada atualizam o site automaticamente.
 
-O site usa caminhos relativos e pode ser hospedado no subdiretório do repositório.
+## GitHub Actions e publicação opcional no Pages
+
+O fluxo `.github/workflows/pages.yml` verifica o JavaScript, a análise musical e as interações em cada push ou pull request para `main` ou `master`.
+
+Para usar o GitHub Pages como hospedagem alternativa, ative **GitHub Actions** em **Settings → Pages → Source**. Depois execute **Verificar FretLab** na aba **Actions**, marcando a opção **Também publicar no GitHub Pages**. Essa publicação é manual e independente da Vercel.
 
 ## Verificar a análise musical
 
