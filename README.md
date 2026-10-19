@@ -8,7 +8,8 @@ Ferramenta para aulas de guitarra, com braço interativo, identificação de aco
 - Modos de exploração, acordes e escalas; afinações alternativas e orientação para canhotos.
 - Identificação de acordes, inversões e escalas, distinguindo correspondências exatas de escalas compatíveis.
 - Reprodução sonora sintetizada, transposição e exemplos musicais.
-- Shapes e rascunhos salvos no navegador.
+- Shapes e rascunhos salvos no navegador, com busca por título ou aluno.
+- Navegação pelo teclado, notas ampliadas e modo aula.
 - Exportação de PNG e PDF com nome do aluno e anotações opcionais.
 
 ## Executar localmente
@@ -33,6 +34,7 @@ Com Node.js 22:
 
 ```sh
 node tests/music.cjs
+node tests/ui.cjs
 ```
 
 ## Dados dos alunos
